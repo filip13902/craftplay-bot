@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CraftPlay.pl — Server Members intent evidence</title>
+<meta name="description" content="Screenshots showing why the CraftPlay.pl bot needs the Server Members intent.">
+<style>
+  :root{ --bg:#ffffff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e7ec;
+         --accent:#2f6feb; --box:#f6f8fa; --max:56rem; }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14171a; --fg:#e6e9ec; --muted:#9aa4af; --line:#2a2f36;
+           --accent:#6ea0ff; --box:#1b1f24; } }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--fg);
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+  .wrap{max-width:var(--max); margin:0 auto; padding:3rem 1.25rem 5rem}
+  header{border-bottom:1px solid var(--line); padding-bottom:1.5rem; margin-bottom:2rem}
+  h1{font-size:1.6rem; margin:0 0 .5rem}
+  .meta{color:var(--muted); font-size:.9rem; margin:0}
+  .lead{color:var(--muted)}
+  figure{margin:0 0 2.75rem}
+  figcaption{color:var(--muted); font-size:.93rem; margin-top:.6rem}
+  figcaption b{color:var(--fg); font-weight:600}
+  img{max-width:100%; height:auto; display:block; border:1px solid var(--line);
+      border-radius:8px; background:#1e2124}
+  .note{background:var(--box); border:1px solid var(--line); border-radius:8px;
+        padding:1rem 1.25rem; margin:1.5rem 0; font-size:.95rem}
+  a{color:var(--accent)}
+  footer{margin-top:2rem; padding-top:1.25rem; border-top:1px solid var(--line);
+         color:var(--muted); font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Server Members intent — evidence</h1>
+  <p class="meta">CraftPlay.pl &middot; app ID 1327026908726296606 &middot; guild 561167627976835082</p>
+</header>
+
+<p class="lead">The bot needs member data to work out <em>who</em> a ticket belongs to and
+<em>what role</em> someone holds. The interface is in Polish, so each screenshot is explained
+in English.</p>
+
+<div class="note">
+  <strong>Privacy note.</strong> The player's username and avatar have been blacked out.
+  The bot requests member data only for the single guild it runs in and never builds, stores
+  or exports a member list.
+</div>
+
+<figure>
+  <img src="zrzuty/6-przypomnienie-licznik.png" alt="Reminder addressed to the resolved ticket owner">
+  <figcaption><b>Resolving who owns the ticket.</b> This reminder is addressed to the player
+  whose ticket it is. Working that out requires member data: TicketTool names the channel after
+  the player and grants channel permission overwrites, but those overwrites are also granted to
+  bots and to staff roles. The bot therefore resolves the channel name to a guild member and
+  filters bots out of the overwrite list. Before we had this intent the bot pinged random users
+  and other bots. The counter (<code>x6</code>) shows it replaces its previous reminder instead
+  of flooding the channel.</figcaption>
+</figure>
+
+<figure>
+  <img src="zrzuty/1-panel-pomocy.png" alt="Help panel restricted to the ticket author">
+  <figcaption><b>Restricting interaction to the ticket author.</b> The panel stores the resolved
+  author's user ID (visible in the embed footer as <code>author:…</code>) and refuses clicks from
+  anyone else, so a passing staff member or another player cannot answer on the player's behalf.
+  The same resolved identity is what makes the automated detections react only to the ticket
+  owner and never to a moderator's message.</figcaption>
+</figure>
+
+<div class="note">
+  <strong>Also dependent on this intent, not pictured:</strong> reading a member's roles to decide
+  whether they may use a staff-only command (changing the reply method, stopping reminders,
+  cancelling an automatic ticket closure); excluding members with staff roles from FAQ auto-replies
+  and anti-spam handling, so the bot never answers or times out its own moderators; and applying
+  the 5-minute anti-spam timeout, which is issued through the guild member object.
+</div>
+
+<footer>
+  <p><a href="zrzuty.html">All screenshots</a> &middot;
+  <a href="zrzuty-message-content.html">Message Content evidence</a> &middot;
+  <a href="regulamin.html">Terms of Service</a> &middot;
+  <a href="polityka-prywatnosci.html">Privacy Policy</a></p>
+</footer>
+
+</div>
+</body>
+</html>

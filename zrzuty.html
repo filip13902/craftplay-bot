@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CraftPlay.pl bot — screenshots</title>
+<meta name="description" content="Screenshots of the CraftPlay.pl Discord support bot in use, submitted with the privileged intent request.">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e7ec;
+    --accent:#2f6feb; --box:#f6f8fa; --max:56rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14171a; --fg:#e6e9ec; --muted:#9aa4af; --line:#2a2f36;
+           --accent:#6ea0ff; --box:#1b1f24; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--fg);
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+  .wrap{max-width:var(--max); margin:0 auto; padding:3rem 1.25rem 5rem}
+  header{border-bottom:1px solid var(--line); padding-bottom:1.5rem; margin-bottom:2rem}
+  h1{font-size:1.6rem; margin:0 0 .5rem}
+  h2{font-size:1.05rem; margin:0 0 .35rem}
+  .meta{color:var(--muted); font-size:.9rem; margin:0}
+  .lead{color:var(--muted)}
+  figure{margin:0 0 2.75rem}
+  figcaption{color:var(--muted); font-size:.93rem; margin-top:.6rem}
+  figcaption b{color:var(--fg); font-weight:600}
+  img{max-width:100%; height:auto; display:block; border:1px solid var(--line);
+      border-radius:8px; background:#1e2124}
+  .note{background:var(--box); border:1px solid var(--line); border-radius:8px;
+        padding:1rem 1.25rem; margin:1.5rem 0; font-size:.95rem}
+  a{color:var(--accent)}
+  footer{margin-top:2rem; padding-top:1.25rem; border-top:1px solid var(--line);
+         color:var(--muted); font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>CraftPlay.pl — the bot in use</h1>
+  <p class="meta">Screenshots submitted with our privileged intent request &middot; app ID 1327026908726296606</p>
+</header>
+
+<p class="lead">These screenshots show the features described in our application, captured on
+the single Discord guild the bot runs in (ID 561167627976835082). The interface and all
+player-facing text are in Polish, so each screenshot is explained in English below.</p>
+
+<div class="note">
+  <strong>Privacy note.</strong> Where a screenshot showed a real player, their username and
+  avatar have been blacked out. Most screenshots were captured on the maintainer's own test
+  ticket. No player data is published on this page.
+</div>
+
+<figure>
+  <img src="zrzuty/1-panel-pomocy.png" alt="Help panel with six category buttons">
+  <figcaption><b>1. Help panel.</b> Posted automatically on a new ticket. The player picks the
+  kind of problem; each button opens a matching form. Only the ticket author can use it —
+  the author's ID is stored in the embed footer.</figcaption>
+</figure>
+
+<figure>
+  <img src="zrzuty/2-formularz-zgloszenie.png" alt="Modal form for reporting a player">
+  <figcaption><b>2. Report-a-player form.</b> Opened by the first button. The warning banner
+  tells the player never to share passwords or other sensitive data.</figcaption>
+</figure>
+
+<figure>
+  <img src="zrzuty/3-formularz-odwolanie-ban.png" alt="Ban appeal modal with four fields">
+  <figcaption><b>3. Ban appeal form.</b> Collects nickname, ban reason, expiry and a free-text
+  description. These four answers feed the triage logic shown next.</figcaption>
+</figure>
+
+<figure>
+  <img src="zrzuty/4-analiza-bana-konsola.png" alt="Ban appeal summary and console-ban reply">
+  <figcaption><b>4. Ban-appeal triage.</b> The bot summarises the submitted appeal, recognises
+  that the ban was issued automatically by the anti-cheat, and posts the standard explanation
+  of what evidence the player needs to provide. Test data.</figcaption>
+</figure>
+
+<figure>
+  <img src="zrzuty/5-reset-hasla.png" alt="Password reset form answers and the premium procedure">
+  <figcaption><b>5. Password-reset workflow — why Message Content is needed.</b> The upper part
+  is the intake form <em>posted by TicketTool, a third-party bot</em>: whether the player owns
+  a premium account, whether they played before, whether they purchased anything, and a free-text
+  description. Our bot can only read this because of the Message Content intent. Based on those
+  answers it selects the right identity-verification procedure — here the premium route — and
+  confirms once the player reports back.</figcaption>
+</figure>
+
+<figure>
+  <img src="zrzuty/6-przypomnienie-licznik.png" alt="Reminder message with a counter">
+  <figcaption><b>6. Reminder with counter.</b> When staff are waiting for a reply, the bot posts
+  a single reminder and updates its counter (<code>x6</code>) instead of flooding the channel.
+  The player's username is blacked out.</figcaption>
+</figure>
+
+<figure>
+  <img src="zrzuty/7-ankieta.png" alt="Optional one-question survey with seven buttons">
+  <figcaption><b>7. Optional survey.</b> Shown once after a completed password reset: "where did
+  you hear about the server?". Answering is entirely voluntary and only aggregate counts are
+  kept — no nicknames or user IDs. The player's username is blacked out.</figcaption>
+</figure>
+
+<figure>
+  <img src="zrzuty/8-cierpliwosc.png" alt="Bot asking an impatient player to wait">
+  <figcaption><b>8. Impatience detection.</b> A player wrote a free-text complaint about waiting;
+  the bot matched it against a keyword list and asked for patience. The reply is limited to once
+  every five minutes per ticket, and repeated attempts lead to a short timeout. The player's
+  username is blacked out.</figcaption>
+</figure>
+
+<figure>
+  <img src="zrzuty/9-ocr-nieprawidlowy-nick.png" alt="Player's game screenshot and the bot's matching reply">
+  <figcaption><b>9. Screenshot recognition (OCR).</b> The player attached a photo of the Minecraft
+  error screen blocking them. The bot read the image in memory, ran OCR locally with
+  <code>tesseract.js</code>, matched one of three known in-game errors — here a nickname whose
+  capitalisation differs from the registered one — and replied with the exact fix. The image and
+  the recognised text are never stored, and nothing is sent to any external service. The
+  blacked-out boxes inside the game screenshot hide another player's Minecraft nickname.</figcaption>
+</figure>
+
+<footer>
+  <p>Per-intent evidence:
+  <a href="zrzuty-message-content.html">Message Content</a> &middot;
+  <a href="zrzuty-server-members.html">Server Members</a><br>
+  Related documents:
+  <a href="regulamin.html">Terms of Service</a> &middot;
+  <a href="polityka-prywatnosci.html">Privacy Policy</a> (both in Polish)</p>
+</footer>
+
+</div>
+</body>
+</html>
