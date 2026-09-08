@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności bota Discord — CraftPlay.pl</title>
+<meta name="description" content="Polityka prywatności bota Discord serwera CraftPlay.pl — jakie dane przetwarzamy, w jakim celu i jakie masz prawa.">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e7ec;
+    --accent:#2f6feb; --box:#f6f8fa; --warn-bg:#fff8e6; --warn-line:#e8c26a;
+    --ok-bg:#eaf7ee; --ok-line:#9fd3ae;
+    --max:46rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14171a; --fg:#e6e9ec; --muted:#9aa4af; --line:#2a2f36;
+      --accent:#6ea0ff; --box:#1b1f24; --warn-bg:#2b2415; --warn-line:#6b5522;
+      --ok-bg:#16251b; --ok-line:#2f5a3c;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:3rem 1.25rem 5rem}
+  header{border-bottom:1px solid var(--line); padding-bottom:1.5rem; margin-bottom:2rem}
+  h1{font-size:1.75rem; line-height:1.25; margin:0 0 .5rem}
+  h2{font-size:1.15rem; margin:2.5rem 0 .75rem; padding-top:.5rem; border-top:1px solid var(--line)}
+  h3{font-size:1rem; margin:1.5rem 0 .5rem}
+  .meta{color:var(--muted); font-size:.9rem; margin:0}
+  .lead{color:var(--muted); font-size:1.02rem}
+  ol,ul{padding-left:1.35rem}
+  li{margin:.35rem 0}
+  ol.top>li{margin:.6rem 0}
+  a{color:var(--accent)}
+  code{background:var(--box); padding:.1em .35em; border-radius:4px; font-size:.9em;
+       font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .box{background:var(--box); border:1px solid var(--line); border-radius:8px; padding:1rem 1.25rem; margin:1.25rem 0}
+  .todo{background:var(--warn-bg); border:1px solid var(--warn-line); border-radius:8px; padding:1rem 1.25rem; margin:1.25rem 0}
+  .todo strong{display:block; margin-bottom:.35rem}
+  .ok{background:var(--ok-bg); border:1px solid var(--ok-line); border-radius:8px; padding:1rem 1.25rem; margin:1.25rem 0}
+  .tablewrap{overflow-x:auto; margin:1rem 0}
+  table{width:100%; border-collapse:collapse; font-size:.94rem; min-width:34rem}
+  th,td{border:1px solid var(--line); padding:.55rem .7rem; text-align:left; vertical-align:top}
+  th{background:var(--box); font-weight:600}
+  footer{margin-top:3.5rem; padding-top:1.25rem; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem}
+  .toc{font-size:.95rem}
+  .toc ol{padding-left:1.2rem}
+  @media print{ body{background:#fff;color:#000} .wrap{padding:0} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Polityka prywatności bota Discord serwera CraftPlay.pl</h1>
+  <p class="meta">Wersja 1.0 &middot; obowiązuje od 7 września 2026 r.</p>
+</header>
+
+<p class="lead">Dokument opisuje, jakie dane osobowe przetwarza automatyczna aplikacja (bot)
+Discord działająca na serwerze społeczności <strong>CraftPlay.pl</strong> — w jakim celu,
+na jakiej podstawie prawnej, jak długo je przechowujemy oraz jakie prawa przysługują
+osobom, których dane dotyczą.</p>
+
+<nav class="toc">
+  <h2 style="border-top:none;padding-top:0">Spis treści</h2>
+  <ol>
+    <li><a href="#s1">Administrator danych i kontakt</a></li>
+    <li><a href="#s2">Czego dotyczy ta polityka</a></li>
+    <li><a href="#s3">Jakie dane przetwarzamy</a></li>
+    <li><a href="#s4">Cele i podstawy prawne</a></li>
+    <li><a href="#s5">Analiza zrzutów ekranu (OCR) — wyjaśnienie</a></li>
+    <li><a href="#s6">Czego nie robimy</a></li>
+    <li><a href="#s7">Gdzie dane są przechowywane</a></li>
+    <li><a href="#s8">Okresy przechowywania</a></li>
+    <li><a href="#s9">Odbiorcy danych</a></li>
+    <li><a href="#s10">Przekazywanie poza EOG</a></li>
+    <li><a href="#s11">Zautomatyzowane podejmowanie decyzji</a></li>
+    <li><a href="#s12">Twoje prawa</a></li>
+    <li><a href="#s13">Bezpieczeństwo danych</a></li>
+    <li><a href="#s14">Dane osób niepełnoletnich</a></li>
+    <li><a href="#s15">Zmiany polityki</a></li>
+  </ol>
+</nav>
+
+<h2 id="s1">1. Administrator danych i kontakt</h2>
+<div class="box">
+  <p style="margin-top:0"><strong>Administratorem danych osobowych</strong> przetwarzanych
+  w związku z działaniem Bota jest:<br><br>
+  <strong>Dawid Perzyński</strong>, prowadzący działalność gospodarczą z siedzibą w Poznaniu —
+  właściciel serwisu CraftPlay.pl<br>
+  ul. Swojska 21a, 60-592 Poznań<br>
+  NIP 7651693781, REGON 521185312</p>
+  <p><strong>Kontakt w sprawach danych osobowych:</strong>
+  <a href="mailto:craftplay@wp.pl">craftplay@wp.pl</a><br>
+  <strong>Kontakt ogólny:</strong> <a href="mailto:craftplay@wp.pl">craftplay@wp.pl</a></p>
+  <p style="margin-bottom:0"><strong>Inspektor Ochrony Danych:</strong> nie został wyznaczony —
+  we wszystkich sprawach dotyczących danych osobowych prosimy o kontakt na powyższy adres e-mail.</p>
+</div>
+
+<h2 id="s2">2. Czego dotyczy ta polityka</h2>
+<ol class="top">
+  <li>Polityka dotyczy <strong>bota Discord</strong> („CraftPlay.pl”, ID aplikacji
+      <code>1327026908726296606</code>) działającego na serwerze Discord CraftPlay.pl
+      (ID <code>561167627976835082</code>).</li>
+  <li>Bot działa na <strong>jednym serwerze Discord</strong>, w wyznaczonych kategoriach kanałów
+      zgłoszeniowych i na kanałach pomocniczych wskazanych przez Administratora. Poza nimi
+      nie przetwarza treści wiadomości.</li>
+  <li>Polityka <strong>nie dotyczy</strong>:
+    <ul>
+      <li>samej platformy Discord — obowiązuje tam
+          <a href="https://discord.com/privacy" target="_blank" rel="noopener">Polityka prywatności Discord Inc.</a>;</li>
+      <li>aplikacji TicketTool, będącej niezależnym botem podmiotu trzeciego;</li>
+      <li>serwerów gry Minecraft oraz strony craftplay.pl, które mogą mieć odrębne dokumenty.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="s3">3. Jakie dane przetwarzamy</h2>
+
+<h3>3.1. Dane z platformy Discord</h3>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Kategoria</th><th>Dane</th><th>Skąd pochodzą</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Identyfikatory konta</td>
+      <td>Discord ID użytkownika, nazwa użytkownika, pseudonim na serwerze</td>
+      <td>Automatycznie z API Discord przy interakcji z Botem</td>
+    </tr>
+    <tr>
+      <td>Dane członkostwa</td>
+      <td>Role posiadane na serwerze, uprawnienia do kanału zgłoszeniowego</td>
+      <td>Intencja <em>Server Members</em> — służy do rozpoznania, kto jest autorem zgłoszenia,
+          a kto członkiem administracji</td>
+    </tr>
+    <tr>
+      <td>Treść wiadomości</td>
+      <td>Treść wiadomości pisanych <strong>na kanałach zgłoszeniowych</strong> oraz na
+          przeszukiwanych kanałach z nagrodami</td>
+      <td>Intencja <em>Message Content</em></td>
+    </tr>
+    <tr>
+      <td>Załączniki</td>
+      <td>Obrazy (zrzuty ekranu) załączone przez autora zgłoszenia</td>
+      <td>Pobierane z serwerów Discord na czas analizy — patrz pkt 5</td>
+    </tr>
+    <tr>
+      <td>Metadane</td>
+      <td>ID kanału, ID kategorii, nazwa kanału, znaczniki czasu wiadomości</td>
+      <td>API Discord</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>3.2. Dane podane dobrowolnie przez Ciebie w formularzach</h3>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Formularz</th><th>Zbierane dane</th></tr></thead>
+  <tbody>
+    <tr><td>Formularz zgłoszenia (TicketTool)</td>
+        <td>Nick w grze Minecraft, informacja o posiadaniu konta premium, o wcześniejszych zakupach
+            oraz o wcześniejszej grze na serwerze</td></tr>
+    <tr><td>Zgłoszenie gracza</td><td>Nick zgłaszanej osoby</td></tr>
+    <tr><td>Zgłoszenie błędu</td><td>Opis błędu</td></tr>
+    <tr><td>Odwołanie od bana</td><td>Twój nick, powód bana, czas wygaśnięcia bana, opis sytuacji;
+            dodatkowo — przy przekazaniu do analizy — wersja gry i nazwa launchera</td></tr>
+    <tr><td>Odwołanie od mute/warna</td><td>Twój nick, opis sytuacji</td></tr>
+    <tr><td>Problem z zakupioną rangą/usługą</td><td>Twój nick, rodzaj usługi,
+            <strong>rodzaj</strong> metody płatności (np. BLIK, przelew), opis sytuacji</td></tr>
+    <tr><td>Ankieta „skąd znasz serwer”</td><td>Wybrana odpowiedź lub wpisany tekst (opcja „Inne”).
+            Wypełnienie jest <strong>całkowicie dobrowolne</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="box">
+  <p style="margin:0"><strong>Uwaga dotycząca dowodów zakupu.</strong> W sprawach zakupów
+  administracja może poprosić Cię o przesłanie potwierdzenia płatności. Taki zrzut ekranu może
+  zawierać Twój adres e-mail, imię i nazwisko lub numer transakcji. Przesyłasz go dobrowolnie,
+  wyłącznie w celu rozpatrzenia Twojej sprawy. <strong>Prosimy o zasłonięcie danych, które
+  nie są potrzebne do weryfikacji</strong> (np. numeru karty — pełnych danych karty płatniczej
+  nigdy nie wymagamy i nie należy ich przesyłać).</p>
+</div>
+
+<h3>3.3. Dane techniczne</h3>
+<p>Bot zapisuje do logu technicznego na serwerze komunikaty o błędach i zdarzeniach
+technicznych. Mogą one zawierać identyfikator Discord użytkownika, którego dotyczyła
+nieudana operacja. <strong>Log nie zawiera treści wiadomości użytkowników.</strong></p>
+<p>Wyjątkiem jest doraźny tryb diagnostyczny funkcji rozpoznawania obrazu, w którym do logu
+trafia fragment tekstu odczytanego ze zrzutu ekranu (do 200 znaków). Tryb ten jest domyślnie
+wyłączony i włączany wyłącznie na czas rozwiązywania konkretnego problemu.</p>
+
+<h2 id="s4">4. Cele i podstawy prawne</h2>
+<p>Dane przetwarzamy zgodnie z art. 6 RODO (rozporządzenie UE 2016/679):</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Cel</th><th>Podstawa prawna</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Obsługa Twojego zgłoszenia: dobranie właściwej procedury, weryfikacja, czy konto należy
+          do Ciebie, przekazanie sprawy administracji, poinformowanie Cię o wyniku</td>
+      <td>art. 6 ust. 1 lit. b RODO — podjęcie działań na Twoje żądanie oraz świadczenie usługi
+          wsparcia; posiłkowo art. 6 ust. 1 lit. f — nasz prawnie uzasadniony interes w sprawnej
+          obsłudze społeczności</td>
+    </tr>
+    <tr>
+      <td>Automatyczne odpowiedzi na typowe pytania (FAQ) i przypomnienia o zgłoszeniu</td>
+      <td>art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes: skrócenie czasu oczekiwania
+          i odciążenie administracji</td>
+    </tr>
+    <tr>
+      <td>Zabezpieczenie konta gracza: weryfikacja własności konta przy resecie hasła,
+          przeciwdziałanie przejęciom kont</td>
+      <td>art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes nasz oraz właściciela konta
+          w ochronie przed nieuprawnionym dostępem</td>
+    </tr>
+    <tr>
+      <td>Ograniczanie nadużyć: ochrona przed spamem i masowym oznaczaniem administracji
+          (5-minutowa przerwa)</td>
+      <td>art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes w utrzymaniu porządku
+          i dostępności kanałów pomocy</td>
+    </tr>
+    <tr>
+      <td>Rozpoznawanie treści zrzutów ekranu (OCR) w celu automatycznego dobrania instrukcji
+          pomocy</td>
+      <td>art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes w automatyzacji wsparcia;
+          analiza dotyczy wyłącznie materiałów, które sam załączyłeś do własnego zgłoszenia</td>
+    </tr>
+    <tr>
+      <td>Ankieta „skąd znasz serwer” — statystyka skuteczności działań informacyjnych</td>
+      <td>art. 6 ust. 1 lit. a RODO — Twoja dobrowolna zgoda, wyrażona przez kliknięcie odpowiedzi.
+          Zgodę możesz wycofać w każdej chwili (nie wpływa to na zgodność z prawem wcześniejszego
+          przetwarzania)</td>
+    </tr>
+    <tr>
+      <td>Rozpatrywanie reklamacji i obrona przed ewentualnymi roszczeniami</td>
+      <td>art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="s5">5. Analiza zrzutów ekranu (OCR) — wyjaśnienie</h2>
+<p>Ponieważ jest to funkcja, która może budzić wątpliwości, opisujemy ją szczegółowo:</p>
+<ol class="top">
+  <li>Analizowane są <strong>wyłącznie obrazy załączone przez autora zgłoszenia</strong>
+      na jego własnym kanale zgłoszeniowym. Bot ignoruje załączniki wysyłane przez inne osoby,
+      w tym administrację.</li>
+  <li>Obraz jest pobierany z serwerów Discord <strong>do pamięci operacyjnej</strong> serwera
+      i tam przetwarzany. <strong>Nie jest zapisywany na dysku</strong> i po zakończeniu analizy
+      jest usuwany z pamięci.</li>
+  <li>Rozpoznawanie tekstu wykonuje biblioteka <code>tesseract.js</code> działająca
+      <strong>lokalnie na naszym serwerze</strong>. Obraz ani rozpoznany tekst
+      <strong>nie są wysyłane do żadnej usługi zewnętrznej</strong>, w szczególności do
+      usług chmurowych ani systemów sztucznej inteligencji.</li>
+  <li>Rozpoznany tekst jest porównywany z zamkniętą listą kilkunastu fraz odpowiadających
+      trzem komunikatom gry (blokada IP, połączenie z innego kraju, nick zapisany małą literą).
+      <strong>Wynikiem analizy jest wyłącznie informacja „pasuje / nie pasuje”</strong>, na
+      podstawie której Bot wysyła gotową instrukcję.</li>
+  <li>Rozpoznany tekst <strong>nie jest nigdzie zapisywany</strong>. Wyjątkiem jest doraźny tryb
+      diagnostyczny (domyślnie wyłączony) — patrz pkt 3.3.</li>
+  <li>Bot nie rozpoznaje twarzy, nie identyfikuje osób na zdjęciach ani nie profiluje
+      użytkowników na podstawie obrazów.</li>
+</ol>
+
+<h2 id="s6">6. Czego nie robimy</h2>
+<div class="ok">
+<ul style="margin:0">
+  <li><strong>Nie sprzedajemy i nie udostępniamy</strong> danych w celach marketingowych ani
+      reklamowych.</li>
+  <li><strong>Nie tworzymy profili</strong> użytkowników ani nie śledzimy ich aktywności poza
+      kanałami zgłoszeniowymi.</li>
+  <li><strong>Nie prowadzimy żadnej bazy danych o graczach.</strong> Bot nie zapisuje na naszym
+      serwerze ani treści wiadomości, ani nicków, ani identyfikatorów Discord — pliki, które
+      tworzy, zawierają wyłącznie ustawienia, identyfikatory kanałów i anonimowe liczniki
+      (szczegóły w pkt 7.2).</li>
+  <li><strong>Nie zapisujemy treści wiadomości.</strong> Tekst jest porównywany z listami fraz
+      w pamięci i natychmiast odrzucany.</li>
+  <li><strong>Nie zapisujemy przesłanych obrazów</strong> — są przetwarzane w pamięci
+      i usuwane.</li>
+  <li><strong>Nie prosimy o hasła</strong> do konta Minecraft, konta Discord ani skrzynki e-mail
+      i nie należy ich nigdy przesyłać.</li>
+  <li><strong>Nie odczytujemy wiadomości prywatnych</strong> użytkowników.</li>
+  <li><strong>Nie korzystamy z intencji <em>Presence</em></strong> — Bot nie widzi Twojego
+      statusu online ani aktywności (np. w co grasz).</li>
+  <li><strong>Nie przekazujemy danych do usług AI</strong> ani zewnętrznych API analitycznych.</li>
+</ul>
+</div>
+
+<h2 id="s7">7. Gdzie dane są przechowywane</h2>
+
+<h3>7.1. Na platformie Discord</h3>
+<p>Zdecydowana większość danych — treść zgłoszeń, wypełnione formularze, załączniki, wpisy
+na kanałach logów administracyjnych — pozostaje <strong>na serwerach Discord Inc.</strong>,
+w ramach serwera CraftPlay.pl. Discord jest w tym zakresie samodzielnym administratorem
+i przetwarza dane zgodnie z własną
+<a href="https://discord.com/privacy" target="_blank" rel="noopener">Polityką prywatności</a>.
+Dostęp do kanałów zgłoszeniowych i kanałów logów mają wyłącznie upoważnieni członkowie
+administracji CraftPlay.pl.</p>
+
+<h3>7.2. Na naszym serwerze</h3>
+<p>Bot działa na serwerze VPS udostępnianym przez <strong>TitanAxe</strong>, działającym
+w infrastrukturze <strong>OVH SAS</strong>, w centrum danych na terenie Unii Europejskiej
+(Francja). Na dysku tego serwera Bot zapisuje wyłącznie:</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Plik</th><th>Zawartość</th><th>Dane osobowe?</th></tr></thead>
+  <tbody>
+    <tr><td><code>faq-enabled.json</code>, <code>ping-replies-enabled.json</code>,
+            <code>pings-enabled.json</code>, <code>quiet-hours.json</code>,
+            <code>ipban-config.json</code></td>
+        <td>Ustawienia funkcji Bota (włączniki, godziny ciszy, parametry OCR)</td>
+        <td>Nie</td></tr>
+    <tr><td><code>ipban-processed.json</code>, <code>whitelist-processed.json</code>,
+            <code>help-panel-processed.json</code>, <code>survey-asked.json</code></td>
+        <td>Listy <strong>identyfikatorów kanałów</strong>, na których dana czynność została już
+            wykonana (żeby nie powtarzać jej dwa razy)</td>
+        <td>Nie zawierają identyfikatorów użytkowników ani nicków</td></tr>
+    <tr><td><code>survey-stats.json</code></td>
+        <td>Wyłącznie <strong>liczniki zbiorcze</strong> odpowiedzi w ankiecie
+            (np. „YouTube: 42”)</td>
+        <td>Nie — dane w pełni zanonimizowane, bez powiązania z osobą</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Dodatkowo w <strong>pamięci operacyjnej</strong> działającego procesu przechowywane są dane
+robocze bieżących zgłoszeń (identyfikator autora, nick z formularza, wybrana procedura, liczniki
+przypomnień). Dane te <strong>znikają przy każdym restarcie</strong> Bota, a sesja zgłoszenia
+wygasa automatycznie po 12 godzinach.</p>
+
+<h2 id="s8">8. Okresy przechowywania</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Dane</th><th>Okres przechowywania</th></tr></thead>
+  <tbody>
+    <tr><td>Dane robocze zgłoszenia w pamięci Bota</td>
+        <td>Do 12 godzin, nie dłużej niż do restartu procesu</td></tr>
+    <tr><td>Obraz i tekst rozpoznany przez OCR</td>
+        <td>Tylko na czas analizy (kilka sekund) — nie są zapisywane</td></tr>
+    <tr><td>Pliki ustawień i list identyfikatorów kanałów na serwerze</td>
+        <td>Do czasu ich ręcznego wyczyszczenia lub wyłączenia Bota. Nie zawierają danych
+            osobowych, więc okres nie ma znaczenia dla ochrony prywatności</td></tr>
+    <tr><td>Liczniki ankiety</td>
+        <td>Bezterminowo — dane zanonimizowane, nieodwracalnie pozbawione powiązania z osobą</td></tr>
+    <tr><td>Treść kanału zgłoszeniowego i wpisy na kanałach logów administracyjnych (Discord)</td>
+        <td>Do czasu usunięcia kanału lub wiadomości przez administrację, a najpóźniej
+            do zakończenia działalności serwera Discord CraftPlay.pl. Możesz w każdej chwili
+            poprosić o usunięcie dotyczących Cię treści — patrz pkt 12</td></tr>
+    <tr><td>Ticket zamykany w procedurze dostępu z innego kraju</td>
+        <td>Kanał jest usuwany automatycznie po potwierdzeniu przez Ciebie lub po 2 godzinach</td></tr>
+    <tr><td>Logi techniczne serwera</td>
+        <td>Podlegają automatycznej rotacji — najstarsze pliki są nadpisywane i usuwane bez
+            udziału człowieka</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="s9">9. Odbiorcy danych</h2>
+<ol class="top">
+  <li><strong>Administracja serwera CraftPlay.pl</strong> — upoważnione osoby, wyłącznie w zakresie
+      niezbędnym do rozpatrzenia zgłoszenia. Dostęp do kanałów logów mają wyłącznie osoby
+      z odpowiednimi rolami.</li>
+  <li><strong>Discord Inc.</strong> — jako dostawca platformy, na której odbywa się komunikacja.</li>
+  <li><strong>Dostawca serwera VPS</strong> — <strong>TitanAxe</strong>, w zakresie usług
+      hostingowych (podmiot przetwarzający), oraz <strong>OVH SAS</strong> jako dostawca
+      infrastruktury, na której usługa jest świadczona (dalszy podmiot przetwarzający).</li>
+  <li><strong>TicketTool</strong> — niezależna aplikacja tworząca kanały zgłoszeniowe i obsługująca
+      formularz zgłoszenia; działa na podstawie własnych warunków.</li>
+  <li>Dane mogą zostać udostępnione uprawnionym organom państwowym, jeżeli obowiązek taki wynika
+      z przepisów prawa.</li>
+</ol>
+
+<h2 id="s10">10. Przekazywanie danych poza EOG</h2>
+<p>Bot i jego pliki działają na serwerze zlokalizowanym <strong>na terenie Unii Europejskiej</strong>
+(centrum danych we Francji). Systemy te nie przekazują danych do państw trzecich.</p>
+<p>Jednocześnie <strong>Discord Inc. ma siedzibę w Stanach Zjednoczonych</strong> i przetwarza dane
+również poza EOG. Discord deklaruje stosowanie mechanizmów zgodności przewidzianych w RODO
+(w szczególności standardowych klauzul umownych oraz uczestnictwa w programie EU–U.S. Data Privacy
+Framework). Szczegóły znajdziesz w
+<a href="https://discord.com/privacy" target="_blank" rel="noopener">Polityce prywatności Discord</a>.
+Korzystając z platformy Discord, akceptujesz ten sposób przetwarzania danych niezależnie
+od niniejszej polityki.</p>
+
+<h2 id="s11">11. Zautomatyzowane podejmowanie decyzji</h2>
+<ol class="top">
+  <li>Bot podejmuje pewne działania automatycznie: wysyła gotowe odpowiedzi, dobiera procedurę
+      weryfikacji, nakłada <strong>5-minutową przerwę</strong> w pisaniu przy wykryciu spamu
+      ponagleń oraz <strong>usuwa kanał zgłoszeniowy</strong> po zakończeniu procedury dostępu
+      z innego kraju.</li>
+  <li>Działania te <strong>nie wywołują wobec Ciebie skutków prawnych ani nie wpływają w podobnie
+      istotny sposób</strong> na Twoją sytuację w rozumieniu art. 22 RODO — mają charakter
+      techniczny, krótkotrwały i w pełni odwracalny. Bot nie decyduje o trwałej blokadzie konta,
+      nie odrzuca odwołań i nie rozstrzyga o zwrocie płatności; takie decyzje podejmuje wyłącznie
+      człowiek.</li>
+  <li>W każdej chwili możesz zwrócić się do administracji o zweryfikowanie działania automatu
+      przez człowieka, wyrazić własne stanowisko i zakwestionować skutki takiego działania.
+      Kontakt — pkt 1.</li>
+</ol>
+
+<h2 id="s12">12. Twoje prawa</h2>
+<p>W związku z przetwarzaniem Twoich danych przysługuje Ci prawo do:</p>
+<ul>
+  <li><strong>dostępu</strong> do danych i uzyskania ich kopii (art. 15 RODO);</li>
+  <li><strong>sprostowania</strong> danych nieprawidłowych lub niekompletnych (art. 16 RODO);</li>
+  <li><strong>usunięcia</strong> danych — „prawo do bycia zapomnianym” (art. 17 RODO);</li>
+  <li><strong>ograniczenia przetwarzania</strong> (art. 18 RODO);</li>
+  <li><strong>przenoszenia</strong> danych przetwarzanych na podstawie umowy lub zgody
+      (art. 20 RODO);</li>
+  <li><strong>sprzeciwu</strong> wobec przetwarzania opartego na prawnie uzasadnionym interesie —
+      z przyczyn związanych z Twoją szczególną sytuacją (art. 21 RODO);</li>
+  <li><strong>wycofania zgody</strong> w dowolnym momencie — dotyczy ankiety (art. 7 ust. 3 RODO);</li>
+  <li><strong>wniesienia skargi</strong> do organu nadzorczego:<br>
+      Prezes Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa,
+      <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>.</li>
+</ul>
+
+<div class="box">
+  <p style="margin-top:0"><strong>Jak skorzystać z tych praw?</strong></p>
+  <p style="margin-bottom:0">Napisz na adres <a href="mailto:craftplay@wp.pl">craftplay@wp.pl</a>
+  lub utwórz zgłoszenie na serwerze Discord. Prosimy o podanie swojej nazwy użytkownika Discord
+  (lub Discord ID), aby umożliwić odnalezienie danych. Odpowiadamy <strong>bez zbędnej zwłoki,
+  nie później niż w ciągu miesiąca</strong> od otrzymania żądania. Ponieważ Bot nie prowadzi
+  własnej bazy danych o graczach, realizacja prawa do usunięcia sprowadza się w praktyce
+  do usunięcia dotyczących Cię wiadomości i kanałów na serwerze Discord — z zastrzeżeniem
+  danych, które musimy zachować do czasu przedawnienia ewentualnych roszczeń, oraz danych
+  nieodwracalnie zanonimizowanych (liczniki ankiety).</p>
+</div>
+
+<h2 id="s13">13. Bezpieczeństwo danych</h2>
+<ul>
+  <li>Dostęp do serwera, na którym działa Bot, zabezpieczony jest uwierzytelnianiem
+      kluczem SSH; dostęp mają wyłącznie osoby odpowiedzialne za utrzymanie systemu.</li>
+  <li>Dane uwierzytelniające Bota (token aplikacji) przechowywane są w pliku konfiguracyjnym
+      poza kodem źródłowym i nie są udostępniane osobom trzecim.</li>
+  <li>Bot działa z <strong>minimalnym zestawem uprawnień</strong> niezbędnym do realizacji swoich
+      funkcji i reaguje wyłącznie w wyznaczonych kategoriach kanałów.</li>
+  <li>Dostęp do kanałów zgłoszeniowych i logów administracyjnych ograniczony jest systemem ról
+      Discord do upoważnionych członków administracji.</li>
+  <li>Komunikacja z API Discord odbywa się wyłącznie z użyciem szyfrowanego połączenia (HTTPS/WSS).</li>
+  <li>Logi techniczne podlegają automatycznej rotacji, dzięki czemu nie gromadzą się bez
+      ograniczeń.</li>
+</ul>
+
+<h2 id="s14">14. Dane osób niepełnoletnich</h2>
+<p>Zgodnie z warunkami Discord z platformy mogą korzystać osoby, które ukończyły co najmniej
+13 lat (lub więcej, jeżeli tak stanowi prawo kraju zamieszkania). Nie zbieramy świadomie danych
+osób poniżej tego wieku. Przetwarzanie oparte na zgodzie (ankieta) w odniesieniu do osób poniżej
+16. roku życia wymaga zgody opiekuna prawnego. Jeżeli stwierdzimy, że dane pochodzą od osoby,
+która nie spełnia wymogu wieku, usuniemy je niezwłocznie — prosimy o kontakt na adres z pkt 1.</p>
+
+<h2 id="s15">15. Zmiany polityki</h2>
+<p>Politykę możemy zmieniać w razie zmiany funkcji Bota, przepisów prawa lub zasad platformy
+Discord. <strong>Aktualna wersja jest zawsze publikowana pod tym adresem</strong>, do którego
+odsyła opis profilu Bota na Discordzie. Datę i numer wersji znajdziesz w nagłówku dokumentu —
+po nich poznasz, że dokument się zmienił.</p>
+<p>Jeżeli zmiana będzie dotyczyć nowych kategorii danych albo nowych celów przetwarzania,
+poinformujemy o niej odrębnie, w sposób umożliwiający zapoznanie się z nią przed rozpoczęciem
+takiego przetwarzania — tego wymaga art. 13 ust. 3 RODO.</p>
+
+<footer>
+  <p>Polityka prywatności bota Discord CraftPlay.pl &middot; wersja 1.0 &middot; 7 września 2026 r.<br>
+  Dokument powiązany: <a href="https://filip13902.github.io/craftplay-bot/regulamin.html">Regulamin korzystania z bota</a>.</p>
+</footer>
+
+</div>
+</body>
+</html>

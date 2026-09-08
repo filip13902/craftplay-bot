@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regulamin bota Discord — CraftPlay.pl</title>
+<meta name="description" content="Regulamin korzystania z bota Discord serwera CraftPlay.pl (Terms of Service).">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1d21; --muted:#5c6570; --line:#e3e7ec;
+    --accent:#2f6feb; --box:#f6f8fa; --warn-bg:#fff8e6; --warn-line:#e8c26a;
+    --max:44rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14171a; --fg:#e6e9ec; --muted:#9aa4af; --line:#2a2f36;
+      --accent:#6ea0ff; --box:#1b1f24; --warn-bg:#2b2415; --warn-line:#6b5522;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:3rem 1.25rem 5rem}
+  header{border-bottom:1px solid var(--line); padding-bottom:1.5rem; margin-bottom:2rem}
+  h1{font-size:1.75rem; line-height:1.25; margin:0 0 .5rem}
+  h2{font-size:1.15rem; margin:2.5rem 0 .75rem; padding-top:.5rem; border-top:1px solid var(--line)}
+  h3{font-size:1rem; margin:1.5rem 0 .5rem}
+  p,li{color:var(--fg)}
+  .meta{color:var(--muted); font-size:.9rem; margin:0}
+  .lead{color:var(--muted); font-size:1.02rem}
+  ol,ul{padding-left:1.35rem}
+  li{margin:.35rem 0}
+  ol.top>li{margin:.6rem 0}
+  a{color:var(--accent)}
+  code{background:var(--box); padding:.1em .35em; border-radius:4px; font-size:.9em;
+       font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .box{background:var(--box); border:1px solid var(--line); border-radius:8px; padding:1rem 1.25rem; margin:1.25rem 0}
+  .todo{background:var(--warn-bg); border:1px solid var(--warn-line); border-radius:8px; padding:1rem 1.25rem; margin:1.25rem 0}
+  .todo strong{display:block; margin-bottom:.35rem}
+  table{width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; display:block; overflow-x:auto}
+  th,td{border:1px solid var(--line); padding:.55rem .7rem; text-align:left; vertical-align:top}
+  th{background:var(--box); font-weight:600}
+  footer{margin-top:3.5rem; padding-top:1.25rem; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem}
+  .toc{font-size:.95rem}
+  .toc ol{padding-left:1.2rem}
+  @media print{ body{background:#fff;color:#000} .wrap{padding:0} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Regulamin korzystania z bota Discord serwera CraftPlay.pl</h1>
+  <p class="meta">Wersja 1.0 &middot; obowiązuje od 7 września 2026 r.</p>
+</header>
+
+<p class="lead">Niniejszy Regulamin określa zasady korzystania z automatycznej aplikacji
+(bota) Discord, działającej na serwerze Discord społeczności <strong>CraftPlay.pl</strong>.
+Bot wspiera obsługę zgłoszeń graczy (tzw. ticketów) oraz udziela automatycznych odpowiedzi
+na najczęściej zadawane pytania.</p>
+
+<nav class="toc">
+  <h2 style="border-top:none;padding-top:0">Spis treści</h2>
+  <ol>
+    <li><a href="#s1">Definicje</a></li>
+    <li><a href="#s2">Operator i kontakt</a></li>
+    <li><a href="#s3">Zakres działania bota</a></li>
+    <li><a href="#s4">Funkcje bota</a></li>
+    <li><a href="#s5">Warunki korzystania</a></li>
+    <li><a href="#s6">Zasady zachowania użytkownika</a></li>
+    <li><a href="#s7">Automatyczne działania moderacyjne</a></li>
+    <li><a href="#s8">Dane osobowe</a></li>
+    <li><a href="#s9">Dostępność usługi i odpowiedzialność</a></li>
+    <li><a href="#s10">Prawa własności i brak powiązań</a></li>
+    <li><a href="#s11">Reklamacje i zgłaszanie problemów</a></li>
+    <li><a href="#s12">Zmiany Regulaminu</a></li>
+    <li><a href="#s13">Postanowienia końcowe</a></li>
+  </ol>
+</nav>
+
+<h2 id="s1">1. Definicje</h2>
+<ul>
+  <li><strong>Bot</strong> — aplikacja Discord o nazwie „CraftPlay.pl” (ID aplikacji:
+      <code>1327026908726296606</code>), działająca automatycznie na Serwerze.</li>
+  <li><strong>Operator</strong> — podmiot prowadzący Serwer i Bota, wskazany w pkt 2.</li>
+  <li><strong>Serwer</strong> — serwer Discord społeczności CraftPlay.pl
+      (ID: <code>561167627976835082</code>).</li>
+  <li><strong>Serwer gry</strong> — serwery gry Minecraft prowadzone pod marką CraftPlay.pl.</li>
+  <li><strong>Użytkownik</strong> — osoba korzystająca z Serwera, która wchodzi w interakcję
+      z Botem (pisze na kanale zgłoszeniowym, klika przyciski Bota, wypełnia formularze).</li>
+  <li><strong>Ticket</strong> — kanał zgłoszeniowy tworzony na Serwerze w celu obsługi
+      indywidualnej sprawy Użytkownika.</li>
+  <li><strong>TicketTool</strong> — zewnętrzna aplikacja Discord, niezależna od Operatora,
+      odpowiedzialna za tworzenie kanałów Ticketów.</li>
+  <li><strong>Discord</strong> — usługa i platforma prowadzona przez Discord Inc.</li>
+</ul>
+
+<h2 id="s2">2. Operator i kontakt</h2>
+<div class="box">
+  <p style="margin-top:0"><strong>Operator Bota:</strong> Dawid Perzyński, prowadzący działalność
+  gospodarczą z siedzibą w Poznaniu — właściciel serwisu CraftPlay.pl<br>
+  <strong>Adres:</strong> ul. Swojska 21a, 60-592 Poznań<br>
+  <strong>NIP:</strong> 7651693781 &nbsp;&middot;&nbsp; <strong>REGON:</strong> 521185312<br>
+  <strong>Adres e-mail do kontaktu:</strong> <a href="mailto:craftplay@wp.pl">craftplay@wp.pl</a><br>
+  <strong>Kontakt w sprawach danych osobowych:</strong>
+  <a href="mailto:craftplay@wp.pl">craftplay@wp.pl</a></p>
+  <p style="margin-bottom:0">Kontakt jest możliwy również poprzez utworzenie zgłoszenia
+  (Ticketu) na Serwerze.</p>
+</div>
+
+<h2 id="s3">3. Zakres działania bota</h2>
+<ol class="top">
+  <li>Bot działa <strong>wyłącznie na jednym serwerze Discord</strong> — serwerze społeczności
+      CraftPlay.pl. Nie jest udostępniany publicznie, nie można go zaprosić na inny serwer
+      i nie jest publikowany w żadnych katalogach botów.</li>
+  <li>Bot reaguje <strong>tylko na wybranych kanałach i w wybranych kategoriach kanałów</strong>
+      przeznaczonych do obsługi zgłoszeń (Ticketów) oraz na kanałach pomocniczych wskazanych
+      przez Operatora. Na pozostałych kanałach Serwera Bot nie podejmuje działań.</li>
+  <li>Korzystanie z Bota jest bezpłatne i stanowi element obsługi społeczności CraftPlay.pl.</li>
+  <li>Bot nie jest wymagany do korzystania z Serwera ani Serwera gry — stanowi jedynie
+      udogodnienie przyspieszające obsługę zgłoszeń.</li>
+</ol>
+
+<h2 id="s4">4. Funkcje bota</h2>
+<p>Bot realizuje następujące funkcje:</p>
+
+<table>
+  <thead><tr><th>Funkcja</th><th>Opis działania</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Automatyczne odpowiedzi (FAQ)</strong></td>
+      <td>Wykrywa w treści wiadomości na kanałach zgłoszeniowych typowe pytania (np. o zakup rangi,
+      reset hasła, rekrutację, nagrody, awarie trybu) i odpowiada gotową informacją. Funkcję można
+      wyłączyć komendą administracyjną.</td>
+    </tr>
+    <tr>
+      <td><strong>Obsługa zgłoszeń o reset hasła</strong></td>
+      <td>Odczytuje formularz wypełniony przez Użytkownika w aplikacji TicketTool (nick w grze,
+      informacja o koncie premium, o dokonanych zakupach i wcześniejszej grze), a następnie dobiera
+      i wysyła właściwą procedurę weryfikacji tożsamości właściciela konta.</td>
+    </tr>
+    <tr>
+      <td><strong>Wyszukiwanie nicku na kanałach z nagrodami</strong></td>
+      <td>W celu weryfikacji zgłoszenia Bot przeszukuje historię publicznych kanałów z nagrodami
+      Serwera pod kątem podanego nicku (do 3000 ostatnich wiadomości na kanał).</td>
+    </tr>
+    <tr>
+      <td><strong>Panel „Strefa pomocy”</strong></td>
+      <td>Na nowym Tickecie wyświetla przyciski wyboru rodzaju sprawy (zgłoszenie gracza, zgłoszenie
+      błędu, odwołanie od bana, odwołanie od mute/warna, problem z zakupioną rangą, inne) i otwiera
+      odpowiedni formularz.</td>
+    </tr>
+    <tr>
+      <td><strong>Analiza odwołań od bana</strong></td>
+      <td>Na podstawie danych z formularza (nick, powód bana, czas wygaśnięcia, opis) rozpoznaje
+      przypadki blokad nałożonych automatycznie (tzw. ban od konsoli / antycheat) i wysyła
+      odpowiednią informację oraz przekazuje zgłoszenie administracji.</td>
+    </tr>
+    <tr>
+      <td><strong>Rozpoznawanie treści zrzutów ekranu (OCR)</strong></td>
+      <td>Zrzuty ekranu załączone przez autora Ticketu są analizowane <strong>lokalnie</strong>
+      pod kątem trzech konkretnych komunikatów gry: blokady adresu IP, blokady połączenia z innego
+      kraju oraz błędu nicku pisanego małą literą. Rozpoznany tekst służy wyłącznie do wybrania
+      właściwej instrukcji pomocy. Szczegóły opisano w Polityce prywatności.</td>
+    </tr>
+    <tr>
+      <td><strong>Przypomnienia i pingi</strong></td>
+      <td>Przypomina Użytkownikowi o oczekiwanej odpowiedzi, a administracji sygnalizuje brak
+      reakcji na zgłoszenie przez 24 godziny. Przypomnienia są wstrzymywane w godzinach ciszy nocnej.</td>
+    </tr>
+    <tr>
+      <td><strong>Ochrona przed nadużyciami</strong></td>
+      <td>Ogranicza powtarzalne ponaglenia i masowe oznaczanie administracji — patrz pkt 7.</td>
+    </tr>
+    <tr>
+      <td><strong>Obsługa dostępu z innego kraju (whitelist)</strong></td>
+      <td>Przekazuje nick Użytkownika do dodania na listę dozwolonych połączeń, informuje o wykonaniu
+      i zamyka Ticket po potwierdzeniu przez Użytkownika lub po upływie 2 godzin.</td>
+    </tr>
+    <tr>
+      <td><strong>Ankieta „skąd znasz serwer”</strong></td>
+      <td>Po zakończeniu procedury resetu hasła Bot wyświetla dobrowolną, jednopytaniową ankietę.
+      Odpowiedź nie jest wymagana do uzyskania pomocy.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="s5">5. Warunki korzystania</h2>
+<ol class="top">
+  <li>Korzystanie z Bota wymaga posiadania konta Discord i przebywania na Serwerze.</li>
+  <li>Użytkownik zobowiązany jest przestrzegać
+      <a href="https://discord.com/terms" target="_blank" rel="noopener">Warunków korzystania z usługi Discord</a>
+      oraz <a href="https://discord.com/guidelines" target="_blank" rel="noopener">Wytycznych dla społeczności Discord</a>.</li>
+  <li>Z Bota mogą korzystać wyłącznie osoby spełniające minimalny wymóg wieku określony przez
+      Discord dla ich kraju zamieszkania (co do zasady ukończone 13 lat).</li>
+  <li>Rozpoczęcie interakcji z Botem (napisanie wiadomości na kanale zgłoszeniowym, kliknięcie
+      przycisku Bota, wysłanie formularza) oznacza akceptację niniejszego Regulaminu.</li>
+  <li>Użytkownik, który nie akceptuje Regulaminu, powinien powstrzymać się od korzystania z Bota;
+      w takim przypadku może skontaktować się z administracją Serwera w inny sposób.</li>
+</ol>
+
+<h2 id="s6">6. Zasady zachowania użytkownika</h2>
+<p>Podczas korzystania z Bota zabronione jest:</p>
+<ol class="top">
+  <li>podawanie nieprawdziwych danych w formularzach, w szczególności podszywanie się pod innego
+      gracza lub zgłaszanie resetu hasła do cudzego konta;</li>
+  <li>przesyłanie sfałszowanych zrzutów ekranu, dowodów zakupu lub innych materiałów w celu
+      wprowadzenia w błąd administracji;</li>
+  <li>wielokrotne ponaglanie i masowe oznaczanie (pingowanie) administracji;</li>
+  <li>celowe wywoływanie automatycznych funkcji Bota w celu zakłócenia jego działania,
+      obciążenia go lub obejścia ograniczeń (w tym zakładanie wielu Ticketów w tej samej sprawie);</li>
+  <li>umieszczanie w wiadomościach i formularzach treści niezgodnych z prawem, obraźliwych,
+      a także <strong>danych osobowych osób trzecich</strong> oraz danych wrażliwych, jeżeli nie są
+      one niezbędne do rozpatrzenia sprawy;</li>
+  <li>przesyłanie w Ticketach haseł do kont — administracja ani Bot <strong>nigdy nie proszą
+      o podanie hasła</strong>.</li>
+</ol>
+<p>Naruszenie powyższych zasad może skutkować odmową obsługi zgłoszenia, ograniczeniem dostępu
+do Bota, a w poważnych przypadkach — sankcjami na Serwerze lub Serwerze gry, zgodnie
+z regulaminem serwera CraftPlay.pl. Skutki automatycznego ograniczenia opisano w pkt 7.</p>
+
+<h2 id="s7">7. Automatyczne działania moderacyjne</h2>
+<ol class="top">
+  <li><strong>Ograniczenie ponagleń.</strong> Automatyczna informacja o konieczności oczekiwania
+      jest wysyłana najwyżej raz na 5 minut w obrębie jednego Ticketu.</li>
+  <li><strong>Czasowe wyciszenie.</strong> Jeżeli Użytkownik w ciągu 10 minut co najmniej 3 razy
+      ponagli lub oznaczy administrację bez treści merytorycznej, Bot nakłada
+      <strong>5-minutową przerwę (timeout)</strong> przewidzianą mechanizmami Discord, wraz
+      z informacją o przyczynie. Przerwa wygasa samoczynnie.</li>
+  <li><strong>Automatyczne zamknięcie Ticketu.</strong> W procedurze dostępu z innego kraju Ticket
+      jest usuwany po potwierdzeniu przez Użytkownika, że problem został rozwiązany, albo po upływie
+      2 godzin od przekazania informacji o dodaniu nicku. Przed usunięciem Bot wysyła Użytkownikowi
+      wiadomość prywatną z podsumowaniem.</li>
+  <li><strong>Nadzór człowieka.</strong> Wszystkie powyższe działania mają charakter techniczny
+      i odwracalny. Użytkownik, który uważa je za nieuzasadnione, może zwrócić się do administracji
+      Serwera (kontakt w pkt 2), która rozpatrzy sprawę i w razie potrzeby uchyli skutki działania
+      automatu. Bot nie podejmuje decyzji o trwałym zablokowaniu konta.</li>
+</ol>
+
+<h2 id="s8">8. Dane osobowe</h2>
+<p>Zasady przetwarzania danych osobowych w związku z działaniem Bota — w tym zakres danych,
+cele, podstawy prawne, okresy przechowywania oraz prawa przysługujące Użytkownikowi — opisano
+w odrębnym dokumencie:</p>
+<p><strong>Polityka prywatności:
+<a href="https://filip13902.github.io/craftplay-bot/polityka-prywatnosci.html">https://filip13902.github.io/craftplay-bot/polityka-prywatnosci.html</a></strong></p>
+<p>Niezależnie od powyższego, korzystanie z platformy Discord podlega
+<a href="https://discord.com/privacy" target="_blank" rel="noopener">Polityce prywatności Discord</a>.</p>
+
+<h2 id="s9">9. Dostępność usługi i odpowiedzialność</h2>
+<ol class="top">
+  <li>Bot udostępniany jest „w takim stanie, w jakim jest” (<em>as is</em>). Operator nie
+      gwarantuje jego nieprzerwanej i bezbłędnej pracy.</li>
+  <li>Operator zastrzega sobie prawo do modyfikowania, czasowego wyłączania lub trwałego
+      zaprzestania działania Bota bądź poszczególnych jego funkcji, w szczególności z przyczyn
+      technicznych, konserwacyjnych lub zmian po stronie platformy Discord.</li>
+  <li>Automatyczne odpowiedzi Bota mają charakter informacyjny i pomocniczy. Wiążące jest
+      stanowisko administracji Serwera przekazane przez człowieka.</li>
+  <li>Operator nie ponosi odpowiedzialności za niedostępność lub nieprawidłowe działanie usług
+      podmiotów trzecich, w szczególności platformy Discord oraz aplikacji TicketTool.</li>
+  <li>Operator nie ponosi odpowiedzialności za skutki podania przez Użytkownika nieprawdziwych
+      lub niekompletnych danych w formularzach.</li>
+  <li>Powyższe ograniczenia nie wyłączają ani nie ograniczają odpowiedzialności Operatora
+      w zakresie, w jakim jest to niedopuszczalne na gruncie bezwzględnie obowiązujących
+      przepisów prawa, w tym przepisów o ochronie konsumentów.</li>
+</ol>
+
+<h2 id="s10">10. Prawa własności i brak powiązań</h2>
+<ol class="top">
+  <li>Kod źródłowy Bota, jego konfiguracja oraz treści formułek stanowią własność Operatora
+      i podlegają ochronie prawnej. Kopiowanie lub wykorzystywanie ich bez zgody Operatora
+      jest zabronione.</li>
+  <li>Bot nie jest tworzony, sponsorowany, wspierany ani zatwierdzany przez
+      <strong>Discord Inc.</strong> „Discord” jest znakiem towarowym Discord Inc.</li>
+  <li>Bot ani serwis CraftPlay.pl nie są powiązane z <strong>Mojang Studios</strong>
+      ani <strong>Microsoft Corporation</strong>. „Minecraft” jest znakiem towarowym Mojang Studios.</li>
+  <li>TicketTool jest niezależną aplikacją podmiotu trzeciego; Operator nie odpowiada za jej
+      działanie ani politykę prywatności.</li>
+</ol>
+
+<h2 id="s11">11. Reklamacje i zgłaszanie problemów</h2>
+<ol class="top">
+  <li>Nieprawidłowości w działaniu Bota, a także zastrzeżenia do jego automatycznych działań,
+      można zgłaszać na adres e-mail wskazany w pkt 2 lub poprzez utworzenie Ticketu na Serwerze.</li>
+  <li>Zgłoszenie powinno zawierać opis problemu oraz — jeśli to możliwe — nazwę kanału,
+      przybliżony czas zdarzenia i nick Użytkownika.</li>
+  <li>Operator rozpatruje zgłoszenia w terminie do <strong>14 dni</strong> od ich otrzymania
+      i informuje o wyniku tą samą drogą, którą wpłynęło zgłoszenie.</li>
+</ol>
+
+<h2 id="s12">12. Zmiany Regulaminu</h2>
+<ol class="top">
+  <li>Operator może zmienić Regulamin w przypadku zmiany funkcji Bota, zmiany przepisów prawa
+      lub zmiany zasad platformy Discord.</li>
+  <li>Aktualnie obowiązująca wersja Regulaminu jest zawsze dostępna pod adresem wskazanym
+      <strong>w opisie profilu Bota na Discordzie</strong>. Zmiana jest sygnalizowana
+      aktualizacją daty i numeru wersji na początku niniejszego dokumentu.</li>
+  <li>Operator nie ma obowiązku informowania o zmianach w inny sposób — przed skorzystaniem
+      z Bota warto sprawdzić aktualną wersję dokumentu pod tym adresem.</li>
+  <li>Zmiany wchodzą w życie po upływie <strong>7 dni</strong> od opublikowania nowej wersji
+      pod tym adresem. Dalsze korzystanie z Bota po tym terminie oznacza akceptację zmienionego
+      Regulaminu.</li>
+</ol>
+
+<h2 id="s13">13. Postanowienia końcowe</h2>
+<ol class="top">
+  <li>W sprawach nieuregulowanych niniejszym Regulaminem zastosowanie mają przepisy prawa
+      polskiego, w szczególności Kodeksu cywilnego oraz ustawy o świadczeniu usług drogą
+      elektroniczną, a także przepisy RODO.</li>
+  <li>Jeżeli którekolwiek postanowienie Regulaminu okaże się nieważne lub bezskuteczne,
+      pozostałe postanowienia zachowują moc.</li>
+  <li>Niniejszy Regulamin obowiązuje od dnia wskazanego w nagłówku dokumentu.</li>
+</ol>
+
+<footer>
+  <p>Regulamin bota Discord CraftPlay.pl &middot; wersja 1.0 &middot; 7 września 2026 r.<br>
+  Dokument powiązany: <a href="https://filip13902.github.io/craftplay-bot/polityka-prywatnosci.html">Polityka prywatności</a>.</p>
+</footer>
+
+</div>
+</body>
+</html>
