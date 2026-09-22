@@ -57,7 +57,7 @@
 
 <header>
   <h1>Polityka prywatności bota Discord serwera CraftPlay.pl</h1>
-  <p class="meta">Wersja 1.0 &middot; obowiązuje od 7 września 2026 r.</p>
+  <p class="meta">Wersja 1.1 &middot; obowiązuje od 11 września 2026 r.</p>
 </header>
 
 <p class="lead">Dokument opisuje, jakie dane osobowe przetwarza automatyczna aplikacja (bot)
@@ -191,6 +191,11 @@ osobom, których dane dotyczą.</p>
 <p>Bot zapisuje do logu technicznego na serwerze komunikaty o błędach i zdarzeniach
 technicznych. Mogą one zawierać identyfikator Discord użytkownika, którego dotyczyła
 nieudana operacja. <strong>Log nie zawiera treści wiadomości użytkowników.</strong></p>
+<p>Log zawiera również <strong>ślad audytowy zmian konfiguracji Bota</strong> dokonywanych
+przez administrację: identyfikator i nazwę konta administratora, zmienione ustawienie oraz
+jego poprzednią i nową wartość. Podstawą jest art. 6 ust. 1 lit. f RODO — prawnie uzasadniony
+interes w bezpieczeństwie systemu i rozliczalności decyzji administracyjnych. Wpisy te dotyczą
+wyłącznie członków administracji, nigdy graczy.</p>
 <p>Wyjątkiem jest doraźny tryb diagnostyczny funkcji rozpoznawania obrazu, w którym do logu
 trafia fragment tekstu odczytanego ze zrzutu ekranu (do 200 znaków). Tryb ten jest domyślnie
 wyłączony i włączany wyłącznie na czas rozwiązywania konkretnego problemu.</p>
@@ -221,7 +226,7 @@ wyłączony i włączany wyłącznie na czas rozwiązywania konkretnego problemu
     </tr>
     <tr>
       <td>Ograniczanie nadużyć: ochrona przed spamem i masowym oznaczaniem administracji
-          (5-minutowa przerwa)</td>
+          (czasowa przerwa, domyślnie 5 minut)</td>
       <td>art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes w utrzymaniu porządku
           i dostępności kanałów pomocy</td>
     </tr>
@@ -311,13 +316,16 @@ w infrastrukturze <strong>OVH SAS</strong>, w centrum danych na terenie Unii Eur
 <table>
   <thead><tr><th>Plik</th><th>Zawartość</th><th>Dane osobowe?</th></tr></thead>
   <tbody>
-    <tr><td><code>faq-enabled.json</code>, <code>ping-replies-enabled.json</code>,
-            <code>pings-enabled.json</code>, <code>quiet-hours.json</code>,
+    <tr><td><code>settings.json</code>, <code>faq-enabled.json</code>,
+            <code>ping-replies-enabled.json</code>, <code>pings-enabled.json</code>,
+            <code>survey-enabled.json</code>, <code>quiet-hours.json</code>,
             <code>ipban-config.json</code></td>
-        <td>Ustawienia funkcji Bota (włączniki, godziny ciszy, parametry OCR)</td>
+        <td>Ustawienia funkcji Bota zmieniane przez administrację z panelu konfiguracyjnego:
+            włączniki, odstępy czasowe, limity liczbowe, godziny ciszy, parametry OCR.
+            Same liczby i wartości logiczne</td>
         <td>Nie</td></tr>
     <tr><td><code>ipban-processed.json</code>, <code>whitelist-processed.json</code>,
-            <code>help-panel-processed.json</code>, <code>survey-asked.json</code></td>
+            <code>survey-asked.json</code></td>
         <td>Listy <strong>identyfikatorów kanałów</strong>, na których dana czynność została już
             wykonana (żeby nie powtarzać jej dwa razy)</td>
         <td>Nie zawierają identyfikatorów użytkowników ani nicków</td></tr>
@@ -352,7 +360,8 @@ wygasa automatycznie po 12 godzinach.</p>
             do zakończenia działalności serwera Discord CraftPlay.pl. Możesz w każdej chwili
             poprosić o usunięcie dotyczących Cię treści — patrz pkt 12</td></tr>
     <tr><td>Ticket zamykany w procedurze dostępu z innego kraju</td>
-        <td>Kanał jest usuwany automatycznie po potwierdzeniu przez Ciebie lub po 2 godzinach</td></tr>
+        <td>Kanał jest usuwany automatycznie po potwierdzeniu przez Ciebie lub po upływie
+            ustalonego czasu (domyślnie 2 godziny)</td></tr>
     <tr><td>Logi techniczne serwera</td>
         <td>Podlegają automatycznej rotacji — najstarsze pliki są nadpisywane i usuwane bez
             udziału człowieka</td></tr>
@@ -389,9 +398,11 @@ od niniejszej polityki.</p>
 <h2 id="s11">11. Zautomatyzowane podejmowanie decyzji</h2>
 <ol class="top">
   <li>Bot podejmuje pewne działania automatycznie: wysyła gotowe odpowiedzi, dobiera procedurę
-      weryfikacji, nakłada <strong>5-minutową przerwę</strong> w pisaniu przy wykryciu spamu
-      ponagleń oraz <strong>usuwa kanał zgłoszeniowy</strong> po zakończeniu procedury dostępu
-      z innego kraju.</li>
+      weryfikacji, nakłada <strong>czasową przerwę</strong> w pisaniu przy wykryciu spamu
+      ponagleń (domyślnie 5 minut, nigdy dłużej niż 24 godziny) oraz <strong>usuwa kanał
+      zgłoszeniowy</strong> po zakończeniu procedury dostępu z innego kraju. Parametry tych
+      działań administracja może dostosowywać; każda zmiana jest odnotowywana w logu
+      technicznym.</li>
   <li>Działania te <strong>nie wywołują wobec Ciebie skutków prawnych ani nie wpływają w podobnie
       istotny sposób</strong> na Twoją sytuację w rozumieniu art. 22 RODO — mają charakter
       techniczny, krótkotrwały i w pełni odwracalny. Bot nie decyduje o trwałej blokadzie konta,
@@ -463,7 +474,7 @@ poinformujemy o niej odrębnie, w sposób umożliwiający zapoznanie się z nią
 takiego przetwarzania — tego wymaga art. 13 ust. 3 RODO.</p>
 
 <footer>
-  <p>Polityka prywatności bota Discord CraftPlay.pl &middot; wersja 1.0 &middot; 7 września 2026 r.<br>
+  <p>Polityka prywatności bota Discord CraftPlay.pl &middot; wersja 1.1 &middot; 11 września 2026 r.<br>
   Dokument powiązany: <a href="https://filip13902.github.io/craftplay-bot/regulamin.html">Regulamin korzystania z bota</a>.</p>
 </footer>
 

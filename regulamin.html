@@ -54,7 +54,7 @@
 
 <header>
   <h1>Regulamin korzystania z bota Discord serwera CraftPlay.pl</h1>
-  <p class="meta">Wersja 1.0 &middot; obowiązuje od 7 września 2026 r.</p>
+  <p class="meta">Wersja 1.3 &middot; obowiązuje od 22 września 2026 r.</p>
 </header>
 
 <p class="lead">Niniejszy Regulamin określa zasady korzystania z automatycznej aplikacji
@@ -140,7 +140,9 @@ na najczęściej zadawane pytania.</p>
       <td><strong>Obsługa zgłoszeń o reset hasła</strong></td>
       <td>Odczytuje formularz wypełniony przez Użytkownika w aplikacji TicketTool (nick w grze,
       informacja o koncie premium, o dokonanych zakupach i wcześniejszej grze), a następnie dobiera
-      i wysyła właściwą procedurę weryfikacji tożsamości właściciela konta.</td>
+      i wysyła właściwą procedurę weryfikacji tożsamości właściciela konta. Przy weryfikacji na
+      podstawie dowodu zakupu Bot może dodatkowo wysłać przykładowe nagranie pokazujące, gdzie
+      znaleźć potwierdzenie płatności.</td>
     </tr>
     <tr>
       <td><strong>Wyszukiwanie nicku na kanałach z nagrodami</strong></td>
@@ -151,7 +153,10 @@ na najczęściej zadawane pytania.</p>
       <td><strong>Panel „Strefa pomocy”</strong></td>
       <td>Na nowym Tickecie wyświetla przyciski wyboru rodzaju sprawy (zgłoszenie gracza, zgłoszenie
       błędu, odwołanie od bana, odwołanie od mute/warna, problem z zakupioną rangą, inne) i otwiera
-      odpowiedni formularz.</td>
+      odpowiedni formularz. <strong>Do czasu wyboru jednej z opcji autor Ticketu nie ma możliwości
+      pisania na kanale</strong> — Bot przywraca ją niezwłocznie po dokonaniu wyboru. Jeżeli Ticket
+      został otwarty w czasie przerwy w działaniu Bota, panel pojawia się z opóźnieniem, po
+      wznowieniu jego pracy.</td>
     </tr>
     <tr>
       <td><strong>Analiza odwołań od bana</strong></td>
@@ -161,15 +166,22 @@ na najczęściej zadawane pytania.</p>
     </tr>
     <tr>
       <td><strong>Rozpoznawanie treści zrzutów ekranu (OCR)</strong></td>
-      <td>Zrzuty ekranu załączone przez autora Ticketu są analizowane <strong>lokalnie</strong>
-      pod kątem trzech konkretnych komunikatów gry: blokady adresu IP, blokady połączenia z innego
-      kraju oraz błędu nicku pisanego małą literą. Rozpoznany tekst służy wyłącznie do wybrania
-      właściwej instrukcji pomocy. Szczegóły opisano w Polityce prywatności.</td>
+      <td>Zrzuty ekranu załączone przez autora Ticketu są analizowane <strong>lokalnie</strong>,
+      a treść jego formularza i wiadomości — pod kątem słów kluczowych, w poszukiwaniu trzech
+      konkretnych komunikatów gry: blokady adresu IP, blokady połączenia z innego kraju oraz błędu
+      nicku pisanego małą literą. Rozpoznany tekst służy wyłącznie do wybrania właściwej instrukcji
+      pomocy. Szczegóły opisano w Polityce prywatności.</td>
     </tr>
     <tr>
       <td><strong>Przypomnienia i pingi</strong></td>
       <td>Przypomina Użytkownikowi o oczekiwanej odpowiedzi, a administracji sygnalizuje brak
-      reakcji na zgłoszenie przez 24 godziny. Przypomnienia są wstrzymywane w godzinach ciszy nocnej.</td>
+      reakcji na zgłoszenie przez ustalony czas (domyślnie 24 godziny). Przypomnienia są
+      wstrzymywane w godzinach ciszy nocnej. Bot oznacza również <strong>nazwę kanału Ticketu</strong>
+      znacznikami stanu: gdy Użytkownik nie odpowiada administracji przez ustalony czas (❗),
+      gdy administracja nie odpowiada Użytkownikowi przez ustalony czas (⚠️, domyślnie
+      24 godziny) oraz gdy Ticket pozostaje otwarty dłużej niż ustalony czas (🕗, domyślnie
+      48 godzin). Znaczniki służą wyłącznie organizacji pracy administracji i nie mają wpływu
+      na sposób rozpatrzenia sprawy.</td>
     </tr>
     <tr>
       <td><strong>Ochrona przed nadużyciami</strong></td>
@@ -178,7 +190,8 @@ na najczęściej zadawane pytania.</p>
     <tr>
       <td><strong>Obsługa dostępu z innego kraju (whitelist)</strong></td>
       <td>Przekazuje nick Użytkownika do dodania na listę dozwolonych połączeń, informuje o wykonaniu
-      i zamyka Ticket po potwierdzeniu przez Użytkownika lub po upływie 2 godzin.</td>
+      i zamyka Ticket po potwierdzeniu przez Użytkownika lub po upływie ustalonego czasu
+      (domyślnie 2 godziny).</td>
     </tr>
     <tr>
       <td><strong>Ankieta „skąd znasz serwer”</strong></td>
@@ -225,15 +238,20 @@ z regulaminem serwera CraftPlay.pl. Skutki automatycznego ograniczenia opisano w
 <h2 id="s7">7. Automatyczne działania moderacyjne</h2>
 <ol class="top">
   <li><strong>Ograniczenie ponagleń.</strong> Automatyczna informacja o konieczności oczekiwania
-      jest wysyłana najwyżej raz na 5 minut w obrębie jednego Ticketu.</li>
-  <li><strong>Czasowe wyciszenie.</strong> Jeżeli Użytkownik w ciągu 10 minut co najmniej 3 razy
-      ponagli lub oznaczy administrację bez treści merytorycznej, Bot nakłada
-      <strong>5-minutową przerwę (timeout)</strong> przewidzianą mechanizmami Discord, wraz
-      z informacją o przyczynie. Przerwa wygasa samoczynnie.</li>
+      jest wysyłana najwyżej raz na ustalony czas w obrębie jednego Ticketu
+      (domyślnie raz na 5 minut).</li>
+  <li><strong>Czasowe wyciszenie.</strong> Jeżeli Użytkownik w ustalonym oknie czasu przekroczy
+      ustaloną liczbę ponagleń lub oznaczeń administracji bez treści merytorycznej (domyślnie
+      3 razy w ciągu 10 minut), Bot nakłada <strong>czasową przerwę (timeout)</strong> przewidzianą
+      mechanizmami Discord, wraz z informacją o przyczynie. Przerwa trwa domyślnie 5 minut
+      i <strong>w żadnym przypadku nie przekracza 24 godzin</strong>. Wygasa samoczynnie.</li>
   <li><strong>Automatyczne zamknięcie Ticketu.</strong> W procedurze dostępu z innego kraju Ticket
       jest usuwany po potwierdzeniu przez Użytkownika, że problem został rozwiązany, albo po upływie
-      2 godzin od przekazania informacji o dodaniu nicku. Przed usunięciem Bot wysyła Użytkownikowi
-      wiadomość prywatną z podsumowaniem.</li>
+      ustalonego czasu od przekazania informacji o dodaniu nicku (domyślnie 2 godziny). Przed
+      usunięciem Bot wysyła Użytkownikowi wiadomość prywatną z podsumowaniem.</li>
+  <li><strong>Parametry.</strong> Wartości domyślne wskazane wyżej administracja Serwera może
+      dostosowywać w granicach określonych konstrukcją Bota. Zmiany parametrów są odnotowywane
+      w logu technicznym wraz z tożsamością administratora, który ich dokonał.</li>
   <li><strong>Nadzór człowieka.</strong> Wszystkie powyższe działania mają charakter techniczny
       i odwracalny. Użytkownik, który uważa je za nieuzasadnione, może zwrócić się do administracji
       Serwera (kontakt w pkt 2), która rozpatrzy sprawę i w razie potrzeby uchyli skutki działania
@@ -252,7 +270,9 @@ w odrębnym dokumencie:</p>
 <h2 id="s9">9. Dostępność usługi i odpowiedzialność</h2>
 <ol class="top">
   <li>Bot udostępniany jest „w takim stanie, w jakim jest” (<em>as is</em>). Operator nie
-      gwarantuje jego nieprzerwanej i bezbłędnej pracy.</li>
+      gwarantuje jego nieprzerwanej i bezbłędnej pracy. Po przerwie w działaniu Bot wznawia
+      obsługę Ticketów otwartych w czasie przerwy — panel pomocy, procedura weryfikacji
+      i przypomnienia mogą wówczas pojawić się z opóźnieniem, ale nie są pomijane.</li>
   <li>Operator zastrzega sobie prawo do modyfikowania, czasowego wyłączania lub trwałego
       zaprzestania działania Bota bądź poszczególnych jego funkcji, w szczególności z przyczyn
       technicznych, konserwacyjnych lub zmian po stronie platformy Discord.</li>
@@ -315,7 +335,7 @@ w odrębnym dokumencie:</p>
 </ol>
 
 <footer>
-  <p>Regulamin bota Discord CraftPlay.pl &middot; wersja 1.0 &middot; 7 września 2026 r.<br>
+  <p>Regulamin bota Discord CraftPlay.pl &middot; wersja 1.3 &middot; 22 września 2026 r.<br>
   Dokument powiązany: <a href="https://filip13902.github.io/craftplay-bot/polityka-prywatnosci.html">Polityka prywatności</a>.</p>
 </footer>
 
