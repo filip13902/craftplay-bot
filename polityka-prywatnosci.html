@@ -57,7 +57,7 @@
 
 <header>
   <h1>Polityka prywatności bota Discord serwera CraftPlay.pl</h1>
-  <p class="meta">Wersja 1.1 &middot; obowiązuje od 11 września 2026 r.</p>
+  <p class="meta">Wersja 1.4 &middot; obowiązuje od 9 listopada 2026 r.</p>
 </header>
 
 <p class="lead">Dokument opisuje, jakie dane osobowe przetwarza automatyczna aplikacja (bot)
@@ -200,6 +200,55 @@ wyłącznie członków administracji, nigdy graczy.</p>
 trafia fragment tekstu odczytanego ze zrzutu ekranu (do 200 znaków). Tryb ten jest domyślnie
 wyłączony i włączany wyłącznie na czas rozwiązywania konkretnego problemu.</p>
 
+<h3>3.4. Gwiazdki dla administracji</h3>
+<p>Po zamknięciu Ticketu Bot może wysłać Ci <strong>wiadomość prywatną</strong> z pytaniem, czy
+ktoś z administracji zasłużył na gwiazdkę za pomoc. Wiadomość zawiera przycisk przy każdej osobie,
+która udzielała się w Twoim zgłoszeniu — możesz przyznać gwiazdkę jednej z nich, kilku albo nikomu.
+Jest to <strong>dobrowolne</strong>: możesz wiadomość zignorować, co nie pociąga za sobą żadnych
+konsekwencji.</p>
+<p>Na wewnętrznym kanale administracyjnym Discorda zapisujemy wyłącznie:</p>
+<ul>
+  <li>identyfikatory członków administracji, którzy udzielali się w Tickecie (licznik obsłużonych
+      zgłoszeń),</li>
+  <li>identyfikatory tych, którym przyznano gwiazdkę,</li>
+  <li>identyfikator zapisu (transkryptu) zamkniętego Ticketu oraz jego kategorię.</li>
+</ul>
+<div class="box">
+  <p style="margin-top:0"><strong>Nie zapisujemy, kto przyznał gwiazdkę.</strong> We wpisie nie ma
+  Twojego identyfikatora Discord ani nicku, więc nie da się na jego podstawie ustalić, od kogo
+  pochodzi gwiazdka. Identyfikator Ticketu służy wyłącznie temu, by nie poprosić dwa razy
+  oraz by administracja mogła sprawdzić, czego gwiazdka dotyczyła.</p>
+</div>
+<p>Gwiazdki i liczniki obsłużonych zgłoszeń są przetwarzane przede wszystkim jako dane
+<strong>członków administracji</strong> — służą ocenie jakości udzielanej przez nich pomocy
+i są pokazywane w wewnętrznych zestawieniach oraz na wykresach dostępnych wyłącznie dla
+administracji (osobno dla poziomów: administratorzy, moderatorzy, helperzy). Wykresy powstają
+<strong>na naszym serwerze</strong>, z tych samych liczników — nie korzystamy przy tym z żadnej
+usługi zewnętrznej i nie przekazujemy do niej danych. Osoby te mogą w każdej chwili zwrócić się o usunięcie dotyczących ich danych; Bot
+udostępnia komendę, która usuwa wszystkie gwiazdki i liczniki wskazanej osoby. Po utracie
+uprawnień administracyjnych dana osoba przestaje być pokazywana w zestawieniach.</p>
+
+<h3>3.5. Znaczniki stanu zgłoszenia</h3>
+<p>Aby administracja widziała, które zgłoszenia czekają, Bot dopisuje do <strong>nazwy kanału
+Ticketu</strong> znaczniki (❗ ❓ 📕 📙 🕒). Żeby je ustawić, sprawdza:</p>
+<ul>
+  <li>czy po ostatniej odpowiedzi administracji zadałeś pytanie, czyli czy Twoja wiadomość
+      <strong>kończy się znakiem zapytania albo oznaczeniem administracji</strong> — na tej
+      podstawie powstaje znacznik ❓;</li>
+  <li>kiedy padła ostatnia wiadomość — na tej podstawie liczone są progi czasowe;</li>
+  <li>czy wiadomość <strong>członka administracji</strong> zawiera zwrot o przekazaniu sprawy
+      (np. „przekazałem zgłoszenie do właściciela”) — na tej podstawie powstają znaczniki 📕 i 📙;</li>
+  <li>jakie role na serwerze ma osoba, która odpowiedziała — wyłącznie po to, by ustalić, czy
+      znacznik 📙 może już zniknąć.</li>
+</ul>
+<div class="box">
+  <p style="margin:0">Wynikiem tej analizy jest <strong>wyłącznie emotikona w nazwie kanału</strong>.
+  Bot <strong>nie zapisuje</strong> przy tym treści wiadomości, nie tworzy ich kopii ani nie
+  profiluje Użytkowników. Znaczniki ❗, ❓ i 📙 znikają samoczynnie, gdy przestają być aktualne;
+  📕 i 🕒 pozostają, dopóki administracja ich nie usunie. Żaden z nich nie ma wpływu na sposób
+  rozpatrzenia sprawy.</p>
+</div>
+
 <h2 id="s4">4. Cele i podstawy prawne</h2>
 <p>Dane przetwarzamy zgodnie z art. 6 RODO (rozporządzenie UE 2016/679):</p>
 <div class="tablewrap">
@@ -223,6 +272,19 @@ wyłączony i włączany wyłącznie na czas rozwiązywania konkretnego problemu
           przeciwdziałanie przejęciom kont</td>
       <td>art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes nasz oraz właściciela konta
           w ochronie przed nieuprawnionym dostępem</td>
+    </tr>
+    <tr>
+      <td>Badanie jakości pomocy: dobrowolne przyznawanie gwiazdek za obsługę Ticketu oraz
+          zbiorcze zestawienia dla administracji</td>
+      <td>art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes w podnoszeniu jakości wsparcia
+          i w rozliczalności pracy administracji. Gwiazdka nie jest powiązana z osobą, która ją
+          przyznała</td>
+    </tr>
+    <tr>
+      <td>Oznaczanie stanu zgłoszenia w nazwie kanału (znaczniki ❗ ❓ 📕 📙 🕒) — organizacja
+          kolejki zgłoszeń i pilnowanie, by żadne nie zostało pominięte</td>
+      <td>art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes w sprawnej obsłudze zgłoszeń.
+          Wynikiem jest wyłącznie oznaczenie kanału; nie zapisujemy przy tym treści wiadomości</td>
     </tr>
     <tr>
       <td>Ograniczanie nadużyć: ochrona przed spamem i masowym oznaczaniem administracji
@@ -362,6 +424,10 @@ wygasa automatycznie po 12 godzinach.</p>
     <tr><td>Ticket zamykany w procedurze dostępu z innego kraju</td>
         <td>Kanał jest usuwany automatycznie po potwierdzeniu przez Ciebie lub po upływie
             ustalonego czasu (domyślnie 2 godziny)</td></tr>
+    <tr><td>Gwiazdki i liczniki obsłużonych zgłoszeń (identyfikatory administracji)</td>
+        <td>Przechowywane jako wiadomości na wewnętrznym kanale administracyjnym Discorda,
+            do czasu ich usunięcia przez administrację. Nie zawierają identyfikatora osoby
+            oceniającej</td></tr>
     <tr><td>Logi techniczne serwera</td>
         <td>Podlegają automatycznej rotacji — najstarsze pliki są nadpisywane i usuwane bez
             udziału człowieka</td></tr>
@@ -398,7 +464,8 @@ od niniejszej polityki.</p>
 <h2 id="s11">11. Zautomatyzowane podejmowanie decyzji</h2>
 <ol class="top">
   <li>Bot podejmuje pewne działania automatycznie: wysyła gotowe odpowiedzi, dobiera procedurę
-      weryfikacji, nakłada <strong>czasową przerwę</strong> w pisaniu przy wykryciu spamu
+      weryfikacji, <strong>oznacza stan zgłoszenia w nazwie kanału</strong> (pkt 3.5), nakłada
+      <strong>czasową przerwę</strong> w pisaniu przy wykryciu spamu
       ponagleń (domyślnie 5 minut, nigdy dłużej niż 24 godziny) oraz <strong>usuwa kanał
       zgłoszeniowy</strong> po zakończeniu procedury dostępu z innego kraju. Parametry tych
       działań administracja może dostosowywać; każda zmiana jest odnotowywana w logu
@@ -417,7 +484,10 @@ od niniejszej polityki.</p>
 <p>W związku z przetwarzaniem Twoich danych przysługuje Ci prawo do:</p>
 <ul>
   <li><strong>dostępu</strong> do danych i uzyskania ich kopii (art. 15 RODO);</li>
-  <li><strong>sprostowania</strong> danych nieprawidłowych lub niekompletnych (art. 16 RODO);</li>
+  <li><strong>sprostowania</strong> danych nieprawidłowych lub niekompletnych (art. 16 RODO).
+      W sprawach dostępu z innego kraju możesz skorzystać z tego prawa <strong>od razu
+      i samodzielnie</strong> — pod potwierdzeniem przekazania nicku jest przycisk, który pozwala
+      go poprawić; Bot podmienia go wtedy także w wiadomości widzianej przez administrację;</li>
   <li><strong>usunięcia</strong> danych — „prawo do bycia zapomnianym” (art. 17 RODO);</li>
   <li><strong>ograniczenia przetwarzania</strong> (art. 18 RODO);</li>
   <li><strong>przenoszenia</strong> danych przetwarzanych na podstawie umowy lub zgody

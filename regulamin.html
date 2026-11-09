@@ -54,7 +54,7 @@
 
 <header>
   <h1>Regulamin korzystania z bota Discord serwera CraftPlay.pl</h1>
-  <p class="meta">Wersja 1.3 &middot; obowiązuje od 22 września 2026 r.</p>
+  <p class="meta">Wersja 1.6 &middot; obowiązuje od 9 listopada 2026 r.</p>
 </header>
 
 <p class="lead">Niniejszy Regulamin określa zasady korzystania z automatycznej aplikacji
@@ -176,12 +176,32 @@ na najczęściej zadawane pytania.</p>
       <td><strong>Przypomnienia i pingi</strong></td>
       <td>Przypomina Użytkownikowi o oczekiwanej odpowiedzi, a administracji sygnalizuje brak
       reakcji na zgłoszenie przez ustalony czas (domyślnie 24 godziny). Przypomnienia są
-      wstrzymywane w godzinach ciszy nocnej. Bot oznacza również <strong>nazwę kanału Ticketu</strong>
-      znacznikami stanu: gdy Użytkownik nie odpowiada administracji przez ustalony czas (❗),
-      gdy administracja nie odpowiada Użytkownikowi przez ustalony czas (⚠️, domyślnie
-      24 godziny) oraz gdy Ticket pozostaje otwarty dłużej niż ustalony czas (🕗, domyślnie
-      48 godzin). Znaczniki służą wyłącznie organizacji pracy administracji i nie mają wpływu
-      na sposób rozpatrzenia sprawy.</td>
+      wstrzymywane w godzinach ciszy nocnej.</td>
+    </tr>
+    <tr>
+      <td><strong>Znaczniki stanu w nazwie Ticketu</strong></td>
+      <td>Bot dopisuje do <strong>nazwy kanału Ticketu</strong> znaczniki ułatwiające administracji
+      pilnowanie kolejki:
+      <ul style="margin:.4em 0 .2em 1.1em">
+        <li><strong>❗</strong> — Użytkownik nie odpowiedział administracji przez ustalony czas
+            (domyślnie 24 godziny). Znika, gdy Użytkownik napisze;</li>
+        <li><strong>❓</strong> — Użytkownik zadał pytanie, na które administracja nie odpowiedziała
+            przez ustalony czas (domyślnie 6 godzin). Za pytanie Bot uznaje wiadomość zakończoną
+            znakiem zapytania albo oznaczeniem administracji, a czas liczy od <strong>pierwszego
+            pytania bez odpowiedzi</strong>. Znika, gdy administracja odpisze;</li>
+        <li><strong>📕</strong> — sprawa została przekazana właścicielowi Serwera. Nie znika
+            samoczynnie;</li>
+        <li><strong>📙</strong> — sprawa została przekazana wyższej administracji. Znika, gdy
+            odpowie osoba o odpowiednio wysokich uprawnieniach;</li>
+        <li><strong>🕒</strong> — Ticket pozostaje otwarty dłużej niż ustalony czas (domyślnie
+            7 dni). Nie znika samoczynnie.</li>
+      </ul>
+      Znaczniki <strong>📕</strong> i <strong>📙</strong> Bot ustawia na podstawie treści wiadomości
+      <strong>administracji</strong> (np. „przekazałem zgłoszenie do właściciela”); nie wynikają one
+      z treści pisanych przez Użytkownika. Wszystkie znaczniki służą wyłącznie organizacji pracy
+      administracji, administracja może je w każdej chwili usunąć, zmieniając nazwę kanału,
+      i <strong>nie mają wpływu na sposób rozpatrzenia sprawy</strong>. Progi czasowe administracja
+      może zmieniać.</td>
     </tr>
     <tr>
       <td><strong>Ochrona przed nadużyciami</strong></td>
@@ -191,12 +211,27 @@ na najczęściej zadawane pytania.</p>
       <td><strong>Obsługa dostępu z innego kraju (whitelist)</strong></td>
       <td>Przekazuje nick Użytkownika do dodania na listę dozwolonych połączeń, informuje o wykonaniu
       i zamyka Ticket po potwierdzeniu przez Użytkownika lub po upływie ustalonego czasu
-      (domyślnie 2 godziny).</td>
+      (domyślnie 2 godziny). Pod potwierdzeniem Bot umieszcza <strong>przycisk pozwalający poprawić
+      podany nick</strong>. Po jego użyciu Bot podmienia nick zarówno w wiadomości na Tickecie, jak
+      i w wiadomości przekazanej administracji, dzięki czemu sprostowanie jest skuteczne od razu
+      i nie wymaga osobnego zgłoszenia. Przycisku może użyć wyłącznie autor Ticketu.</td>
     </tr>
     <tr>
       <td><strong>Ankieta „skąd znasz serwer”</strong></td>
       <td>Po zakończeniu procedury resetu hasła Bot wyświetla dobrowolną, jednopytaniową ankietę.
       Odpowiedź nie jest wymagana do uzyskania pomocy.</td>
+    </tr>
+    <tr>
+      <td><strong>Prośba o przyznanie gwiazdki</strong></td>
+      <td>Po zamknięciu Ticketu Bot może wysłać Ci <strong>wiadomość prywatną</strong> z pytaniem,
+      czy ktoś z administracji zasłużył na gwiazdkę za pomoc. Wiadomość zawiera przycisk przy
+      każdej osobie, która udzielała się w Twoim zgłoszeniu — możesz przyznać gwiazdkę jednej
+      z nich, kilku albo nikomu. <strong>Jest to całkowicie dobrowolne</strong>: możesz wiadomość
+      zignorować, a brak gwiazdki nie wpływa ani na rozpatrzenie Twojej sprawy, ani na przyszłe
+      zgłoszenia. Zapisujemy wyłącznie to, <strong>komu</strong> przyznano gwiazdkę —
+      <strong>nie zapisujemy, kto ją przyznał</strong>. Na jeden Ticket przypada jedna prośba.
+      Jeżeli masz wyłączone wiadomości prywatne od członków Serwera, prośba nie dotrze i nic
+      więcej się nie dzieje.</td>
     </tr>
   </tbody>
 </table>
