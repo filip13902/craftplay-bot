@@ -57,7 +57,7 @@
 
 <header>
   <h1>Polityka prywatności bota Discord serwera CraftPlay.pl</h1>
-  <p class="meta">Wersja 1.4 &middot; obowiązuje od 9 listopada 2026 r.</p>
+  <p class="meta">Wersja 1.5 &middot; obowiązuje od 23 listopada 2026 r.</p>
 </header>
 
 <p class="lead">Dokument opisuje, jakie dane osobowe przetwarza automatyczna aplikacja (bot)
@@ -167,8 +167,10 @@ osobom, których dane dotyczą.</p>
             oraz o wcześniejszej grze na serwerze</td></tr>
     <tr><td>Zgłoszenie gracza</td><td>Nick zgłaszanej osoby</td></tr>
     <tr><td>Zgłoszenie błędu</td><td>Opis błędu</td></tr>
-    <tr><td>Odwołanie od bana</td><td>Twój nick, powód bana, czas wygaśnięcia bana, opis sytuacji;
-            dodatkowo — przy przekazaniu do analizy — wersja gry i nazwa launchera</td></tr>
+    <tr><td>Odwołanie od bana</td><td>Twój nick, powód bana, czas wygaśnięcia bana, opis sytuacji
+            oraz — w <strong>nieobowiązkowym</strong> polu — nazwa launchera, lista modów i wersja
+            gry. Pole to służy wyłącznie ustaleniu technicznej przyczyny blokady; możesz je
+            zostawić puste, a Bot poprosi wtedy o te dane w wiadomości (również bez przymusu)</td></tr>
     <tr><td>Odwołanie od mute/warna</td><td>Twój nick, opis sytuacji</td></tr>
     <tr><td>Problem z zakupioną rangą/usługą</td><td>Twój nick, rodzaj usługi,
             <strong>rodzaj</strong> metody płatności (np. BLIK, przelew), opis sytuacji</td></tr>
@@ -470,6 +472,11 @@ od niniejszej polityki.</p>
       zgłoszeniowy</strong> po zakończeniu procedury dostępu z innego kraju. Parametry tych
       działań administracja może dostosowywać; każda zmiana jest odnotowywana w logu
       technicznym.</li>
+  <li>Na podstawie danych z formularza Bot <strong>dobiera treść informacji</strong>, którą
+      Ci wysyła — na przykład w odwołaniu od bana inaczej odpowie, gdy w nieobowiązkowym polu
+      wskażesz launcher znany z powodowania blokad AntyCheata. Taka wiadomość ma charakter
+      <strong>informacyjny i nie jest rozstrzygnięciem Twojej sprawy</strong>; odwołanie trafia
+      do administracji i ocenia je człowiek.</li>
   <li>Działania te <strong>nie wywołują wobec Ciebie skutków prawnych ani nie wpływają w podobnie
       istotny sposób</strong> na Twoją sytuację w rozumieniu art. 22 RODO — mają charakter
       techniczny, krótkotrwały i w pełni odwracalny. Bot nie decyduje o trwałej blokadzie konta,
